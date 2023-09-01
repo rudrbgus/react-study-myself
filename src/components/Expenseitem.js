@@ -1,6 +1,7 @@
 import React from 'react'
 import './Expenseitem.css';
-const Expenseitem = ({title, price: propsPrice, date}) => {
+import ExpenseDate from './ExpenseDate';
+const Expenseitem = (props) => {
   const price = 9999;
   const expenseDate = date;
   const expenseTitle = title;
@@ -22,7 +23,7 @@ const Expenseitem = ({title, price: propsPrice, date}) => {
 
   return (    
     <div className='expense-item'>
-        <div>{makeFormattedDate()}</div>
+        <ExpenseDate date={date}/>
         <div className='expense-item__description'>
             <h2>{expenseTitle}</h2>
             <div className='expense-item__price'>{formattedPrice}원</div>
