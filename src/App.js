@@ -1,5 +1,6 @@
 import './App.css';
 import Expenseitem from './components/Expenseitem';
+import Expenses from './components/Expenses';
 
 
 const App = () => {
@@ -8,22 +9,22 @@ const App = () => {
     {
       title: '바나나',
       price: '2000',
-      date: new Date(2023, 8, 10)
+      date: new Date(2023, 8 - 1 , 10)
     },
     {
       title: '키위',
       price: '8000',
-      date: new Date(2023, 8, 14)
+      date: new Date(2023, 6 - 1, 14)
     },
     {
       title: '메론',
       price: '30000',
-      date: new Date(2023, 8, 20)
+      date: new Date(2023, 8 - 1, 20)
     }
   ];
   return (  
     <>
-      <Expenseitem items ={expense}/>                       
+      <Expenses items ={expenses}/>                       
     </>  
     
   );

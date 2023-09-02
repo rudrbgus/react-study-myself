@@ -1,24 +1,15 @@
 import React from 'react'
 import './Expenseitem.css';
 import ExpenseDate from './ExpenseDate';
-const Expenseitem = (props) => {
-  const price = 9999;
-  const expenseDate = date;
+const Expenseitem = ({title, price, date}) => {    
   const expenseTitle = title;
-  const expensePrice = propsPrice;
+  const expensePrice = price;
   const formattedPrice = new Intl.NumberFormat('ko-KR').format(expensePrice);
 
   const make2digit = (text) =>{
     return text.toString().padStart(2, '0');
   };
-
-  const makeFormattedDate = () =>{
-    const year = expenseDate.getFullYear();
-    const month = expenseDate.getMonth();
-    const date = expenseDate.getDate();
-
-    return `${year}년 ${make2digit(month)}월 ${make2digit(date)}일`;
-  };
+  
 
 
   return (    
