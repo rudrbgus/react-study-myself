@@ -19,7 +19,7 @@ const Expenses = ({items}) => {
             price = {items[2].price}
             date = {items[2].date}
         />
-    </div>
+    </div> 
   )
 }
 

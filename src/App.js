@@ -1,4 +1,5 @@
 import './App.css';
+import Hello from './Hello';
 import Expenseitem from './components/Expenseitem';
 import Expenses from './components/Expenses';
 
@@ -24,7 +25,14 @@ const App = () => {
   ];
   return (  
     <>
-      <Expenses items ={expenses}/>                       
+      <Expenses items ={expenses}/>   
+      <Hello>
+        <ul>
+          <li>사과</li>
+          <li>포도</li>
+          <li>복숭아</li>
+        </ul>
+        </Hello>                    
     </>  
     
   );
