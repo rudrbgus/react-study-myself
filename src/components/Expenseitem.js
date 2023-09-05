@@ -5,8 +5,8 @@ import Card from './UI/Card';
 
 const Expenseitem = ({title, price, date}) => {    
   
-  let stateItem = useState();
-  console.log(stateItem);
+  const [itemTitle, setItemTitle] = useState(title);
+  
   
   const expenseTitle = title;
   const expensePrice = price;
@@ -17,14 +17,15 @@ const Expenseitem = ({title, price, date}) => {
   };
 
   const clickHandler = () =>{
-    console.log('버튼 클릭함');
+    // state 변수는 반드시 setter를 통해서 만 변경해야함 
+    setItemTitle("안녕");
   }
 
   return (    
     <Card  className = "expense-item">      
             <ExpenseDate date={date}/>
             <div className='expense-item__description'>
-                <h2>{expenseTitle}</h2>
+                <h2>{itemTitle}</h2>
                 <div className='expense-item__price'>{formattedPrice}원</div>
             </div>      
             <button id='btn' onClick={clickHandler}>수정</button>
