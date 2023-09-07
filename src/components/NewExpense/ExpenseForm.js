@@ -7,11 +7,15 @@ const ExpenseForm = () => {
     price:'',
     date:''
   });
+
+  
   
   const titleChangeHandler = e =>{
-    setUserInput({
-      ...userInput,
-      title: e.target.value,
+    setUserInput((a)=>{      
+      return {
+        ...a,
+        title: e.target.value
+      };
     });   
   }
   const priceChangeHandler = e =>{
